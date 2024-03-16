@@ -7,9 +7,6 @@ let minutes = 0;
 let secondes = 0;
 let mSec = 0;
 
-
-
-
 start.addEventListener("click", () => {
     if (interval !== null){
         clearInterval(interval);
@@ -19,8 +16,7 @@ start.addEventListener("click", () => {
 stopt.addEventListener('click', () => {
     clearInterval(interval);
 })
-
-
+//this function for start-button.
 function startBtn() {
     mSec++
     if(mSec === 100) { 
@@ -35,8 +31,7 @@ function startBtn() {
     secondes = String(secondes).padStart(2, '0');
     mSec = String(mSec).padStart(2, '0')
     display.innerHTML = `${minutes}:${secondes}:${mSec}`;
-}
-    
+}    
 function clearBtn() {
     clearInterval(interval);
     minutes = 0;
