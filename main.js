@@ -8,13 +8,12 @@ let secondes = 0;
 let mSec = 0;
 
 start.addEventListener("click", () => {
-    if (interval !== null){
-        clearInterval(interval);
-    }
-    interval = setInterval(startBtn, 10);
+    if (interval === null) interval = setInterval(startBtn, 10)
 });
+
 stopt.addEventListener('click', () => {
     clearInterval(interval);
+    interval = null
 })
 //this function for start-button.
 function startBtn() {
